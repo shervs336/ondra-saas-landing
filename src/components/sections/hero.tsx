@@ -1,4 +1,4 @@
-import { Reveal } from "@/components/reveal";
+import { FadeIn, Reveal } from "@/components/reveal";
 import { WaitlistForm } from "@/components/waitlist-form";
 import { ProductMockup } from "@/components/product-mockup";
 
@@ -14,7 +14,7 @@ export function Hero() {
       </div>
 
       <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-        <Reveal>
+        <FadeIn>
           <a
             href="#waitlist"
             className="inline-flex items-center gap-2 rounded-full border bg-surface/60 px-3 py-1 text-xs text-muted-foreground backdrop-blur transition-colors hover:text-foreground"
@@ -22,33 +22,33 @@ export function Hero() {
             <span className="size-1.5 rounded-full bg-accent shadow-[0_0_10px_var(--accent)]" />
             Now in private beta · 2,400 teams waiting
           </a>
-        </Reveal>
+        </FadeIn>
 
-        <Reveal delay={0.08}>
+        <FadeIn delay={0.08}>
           <h1 className="mt-6 font-serif text-[3.25rem] leading-[0.95] tracking-tight text-balance sm:text-7xl md:text-8xl">
             Every meeting,{" "}
             <em className="bg-gradient-to-br from-glow to-accent bg-clip-text pr-1 text-transparent">remembered.</em>
           </h1>
-        </Reveal>
+        </FadeIn>
 
-        <Reveal delay={0.16}>
+        <FadeIn delay={0.16}>
           <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground text-balance sm:text-lg">
             Lumen joins your calls, writes the notes, and turns every decision into a follow-up, so your team can
             stop typing and start talking.
           </p>
-        </Reveal>
+        </FadeIn>
 
-        <Reveal delay={0.24} className="mt-8 flex w-full justify-center">
+        <FadeIn delay={0.24} className="mt-8 flex w-full justify-center">
           <WaitlistForm id="hero-email" />
-        </Reveal>
-        <Reveal delay={0.3}>
+        </FadeIn>
+        <FadeIn delay={0.3}>
           <p className="text-xs text-muted-foreground">Free during beta. Works with Zoom, Meet and Teams.</p>
-        </Reveal>
+        </FadeIn>
       </div>
 
-      <Reveal delay={0.35} className="mt-16 sm:mt-20">
+      <FadeIn rise delay={0.35} className="mt-16 sm:mt-20">
         <ProductMockup />
-      </Reveal>
+      </FadeIn>
 
       <Reveal className="mx-auto mt-20 max-w-4xl">
         <p className="text-center text-xs tracking-[0.2em] text-muted-foreground uppercase">

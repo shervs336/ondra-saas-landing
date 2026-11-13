@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { CheckIcon, SparklesIcon } from "lucide-react";
 
 const transcript = [
@@ -42,6 +42,7 @@ export function ProductMockup() {
   const actionCount = Math.max(0, s - transcript.length);
 
   return (
+    <LazyMotion features={domAnimation} strict>
     <div className="relative mx-auto w-full max-w-5xl">
       <div aria-hidden className="absolute -inset-x-10 -top-10 -bottom-10 -z-10 rounded-[3rem] bg-glow/20 blur-3xl" />
       <div
@@ -71,11 +72,11 @@ export function ProductMockup() {
             <ul className="mt-4 flex min-h-64 flex-col gap-4">
               <AnimatePresence initial={false}>
                 {lines.map((l, i) => (
-                  <motion.li
+                  <m.li
                     key={i}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0 }}
+                    initial={{ filter: "blur(6px)", y: 10 }}
+                    animate={{ filter: "blur(0px)", y: 0 }}
+                    exit={{ filter: "blur(6px)", opacity: 0 }}
                     transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                     className="flex gap-3"
                   >
@@ -86,7 +87,7 @@ export function ProductMockup() {
                       <p className="text-xs font-medium">{l.who}</p>
                       <p className="mt-0.5 text-sm leading-relaxed text-muted-foreground">{l.text}</p>
                     </div>
-                  </motion.li>
+                  </m.li>
                 ))}
               </AnimatePresence>
             </ul>
@@ -100,11 +101,11 @@ export function ProductMockup() {
             <div className="mt-4 min-h-64">
               <AnimatePresence>
                 {showSummary ? (
-                  <motion.div
+                  <m.div
                     key="summary"
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0 }}
+                    initial={{ filter: "blur(6px)", y: 8 }}
+                    animate={{ filter: "blur(0px)", y: 0 }}
+                    exit={{ filter: "blur(6px)", opacity: 0 }}
                     transition={{ duration: 0.5 }}
                   >
                     <p className="text-sm font-medium">Decisions</p>
@@ -119,12 +120,11 @@ export function ProductMockup() {
                     <p className="mt-5 text-sm font-medium">Action items</p>
                     <ul className="mt-2 space-y-2">
                       {actions.map((a, i) => (
-                        <motion.li
+                        <li
                           key={a.task}
-                          initial={false}
-                          animate={{ opacity: i < actionCount ? 1 : 0.25 }}
-                          transition={{ duration: 0.35 }}
-                          className="flex items-center gap-2.5 rounded-lg border bg-surface px-3 py-2 text-sm"
+                          className={`flex items-center gap-2.5 rounded-lg border bg-surface px-3 py-2 text-sm transition-colors duration-300 ${
+                            i < actionCount ? "text-foreground" : "text-muted-foreground"
+                          }`}
                         >
                           <span
                             className={`grid size-4 shrink-0 place-items-center rounded border transition-colors ${
@@ -137,23 +137,23 @@ export function ProductMockup() {
                           <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 text-[11px] text-muted-foreground">
                             {a.owner}
                           </span>
-                        </motion.li>
+                        </li>
                       ))}
                     </ul>
-                  </motion.div>
+                  </m.div>
                 ) : (
-                  <motion.div
+                  <m.div
                     key="thinking"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
+                    initial={{ filter: "blur(6px)" }}
+                    animate={{ filter: "blur(0px)" }}
+                    exit={{ filter: "blur(6px)", opacity: 0 }}
                     className="space-y-2.5"
                   >
                     <p className="text-sm text-muted-foreground">Listening and taking notes…</p>
                     {[80, 64, 72].map((w) => (
                       <div key={w} className="h-3 animate-pulse rounded-full bg-foreground/8" style={{ width: `${w}%` }} />
                     ))}
-                  </motion.div>
+                  </m.div>
                 )}
               </AnimatePresence>
             </div>
@@ -161,6 +161,7 @@ export function ProductMockup() {
         </div>
       </div>
     </div>
+    </LazyMotion>
   );
 }
 
@@ -169,7 +170,7 @@ function Waveform({ active }: { active: boolean }) {
   return (
     <div aria-hidden className="flex h-4 items-center gap-0.5">
       {bars.map((h, i) => (
-        <motion.span
+        <m.span
           key={i}
           className="w-0.5 rounded-full bg-accent"
           style={{ height: `${h * 100}%` }}

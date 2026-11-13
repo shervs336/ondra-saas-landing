@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, LazyMotion, domAnimation, m } from "motion/react";
 import { CheckIcon } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Reveal } from "@/components/reveal";
@@ -39,6 +39,7 @@ export function Pricing() {
   const [yearly, setYearly] = useState(true);
 
   return (
+    <LazyMotion features={domAnimation} strict>
     <section id="pricing" className="px-4 py-24 sm:py-32">
       <SectionHeading
         eyebrow="Pricing"
@@ -81,7 +82,7 @@ export function Pricing() {
                   <span className="font-serif text-5xl tracking-tight">$</span>
                   <span className="relative inline-flex h-14 overflow-hidden font-serif text-5xl leading-[3.5rem] tracking-tight">
                     <AnimatePresence mode="popLayout" initial={false}>
-                      <motion.span
+                      <m.span
                         key={price}
                         initial={{ y: "100%", opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
@@ -89,7 +90,7 @@ export function Pricing() {
                         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                       >
                         {price}
-                      </motion.span>
+                      </m.span>
                     </AnimatePresence>
                   </span>
                   <span className="ml-1 text-sm text-muted-foreground">
@@ -118,5 +119,6 @@ export function Pricing() {
         })}
       </div>
     </section>
+    </LazyMotion>
   );
 }

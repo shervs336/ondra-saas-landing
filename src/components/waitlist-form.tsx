@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, LazyMotion, domAnimation, m } from "motion/react";
 import { ArrowRightIcon, CheckIcon, LoaderCircleIcon } from "lucide-react";
 import { joinWaitlist, type WaitlistState } from "@/app/actions";
 
@@ -14,9 +14,10 @@ export function WaitlistForm({ id }: { id: string }) {
 
   return (
     <div className="w-full max-w-md">
+      <LazyMotion features={domAnimation} strict>
       <AnimatePresence mode="wait" initial={false}>
         {done ? (
-          <motion.div
+          <m.div
             key="done"
             initial={{ opacity: 0, y: 8, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -28,9 +29,9 @@ export function WaitlistForm({ id }: { id: string }) {
               <CheckIcon className="size-3.5" strokeWidth={3} />
             </span>
             {state.message}
-          </motion.div>
+          </m.div>
         ) : (
-          <motion.form
+          <m.form
             key="form"
             action={action}
             exit={{ opacity: 0, y: -8 }}
@@ -66,9 +67,10 @@ export function WaitlistForm({ id }: { id: string }) {
                 </>
               )}
             </button>
-          </motion.form>
+          </m.form>
         )}
       </AnimatePresence>
+      </LazyMotion>
       <p
         id={`${id}-error`}
         aria-live="polite"
