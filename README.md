@@ -1,12 +1,12 @@
-# Lumen: SaaS landing page
+# Ondra: SaaS landing page
 
 **Live site:** https://lumen-sass-landing.vercel.app
 
-A premium landing page for **Lumen**, a made-up AI meeting-notes product. It's a portfolio piece showing the kind of marketing site freelance clients and startups pay for: editorial typography, layered motion, a working waitlist and a dark/light theme.
+A premium landing page for **Ondra**, a made-up AI meeting-notes product. It's a portfolio piece showing the kind of marketing site freelance clients and startups pay for: editorial typography, layered motion, a working waitlist and a dark/light theme.
 
-> Lumen is fictional. Company names, people and testimonials on the page are invented for the demo.
+> Ondra is fictional. Company names, people and testimonials on the page are invented for the demo.
 
-![Lumen landing page: headline "Every meeting, remembered." above the app mockup](docs/thumbnail@2x.png)
+![Ondra landing page: headline "Every meeting, remembered." above the app mockup](docs/thumbnail@2x.png)
 
 ## Screenshots
 

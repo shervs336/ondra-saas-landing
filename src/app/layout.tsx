@@ -21,11 +21,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lumen: AI meeting notes that remember everything",
+  title: "Ondra: AI meeting notes that remember everything",
   description:
-    "Lumen joins your calls, writes the notes, and turns every decision into a follow-up. Join the private beta.",
+    "Ondra joins your calls, writes the notes, and turns every decision into a follow-up. Join the private beta.",
   openGraph: {
-    title: "Lumen: AI meeting notes",
+    title: "Ondra: AI meeting notes",
     description: "Every meeting, remembered.",
     type: "website",
   },

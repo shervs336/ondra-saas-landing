@@ -30,7 +30,7 @@ export function Navbar() {
             : "border-transparent bg-transparent"
         }`}
       >
-        <a href="#top" aria-label="Lumen home" className="rounded-md focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none">
+        <a href="#top" aria-label="Ondra home" className="rounded-md focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none">
           <Logo />
         </a>
         <ul className="hidden items-center gap-1 md:flex">

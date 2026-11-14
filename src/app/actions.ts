@@ -70,7 +70,7 @@ async function sendConfirmation(email: string) {
   const key = process.env.RESEND_API_KEY;
   if (!key) return;
   // Resend's free tier can send from onboarding@resend.dev until you verify a domain.
-  const from = process.env.RESEND_FROM ?? "Lumen <onboarding@resend.dev>";
+  const from = process.env.RESEND_FROM ?? "Ondra <onboarding@resend.dev>";
   try {
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -78,12 +78,12 @@ async function sendConfirmation(email: string) {
       body: JSON.stringify({
         from,
         to: email,
-        subject: "You're on the Lumen waitlist",
+        subject: "You're on the Ondra waitlist",
         html: `<div style="font-family:Inter,Arial,sans-serif;max-width:480px;margin:auto;padding:32px;color:#1f1b16">
   <h1 style="font-family:Georgia,serif;font-weight:400;font-size:28px;margin:0 0 16px">You're in.</h1>
-  <p style="line-height:1.6;color:#5c554c">Thanks for joining the Lumen private beta. We're letting teams in every week, and we'll email you the moment your spot opens.</p>
+  <p style="line-height:1.6;color:#5c554c">Thanks for joining the Ondra private beta. We're letting teams in every week, and we'll email you the moment your spot opens.</p>
   <p style="line-height:1.6;color:#5c554c">Until then, every meeting is still yours to remember.</p>
-  <p style="margin-top:32px;color:#9a9186;font-size:13px">The Lumen team</p>
+  <p style="margin-top:32px;color:#9a9186;font-size:13px">The Ondra team</p>
 </div>`,
       }),
       cache: "no-store",

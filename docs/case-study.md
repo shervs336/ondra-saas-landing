@@ -1,11 +1,11 @@
-# Lumen: case study
+# Ondra: case study
 
 **Role:** Design and development (solo)
 **Type:** SaaS marketing site / landing page
 **Stack:** Next.js 16, TypeScript, Tailwind CSS v4, shadcn/ui, Motion, Supabase, Resend, Vercel
-**Links:** [Live site](https://lumen-sass-landing.vercel.app) · [Code](https://github.com/shervs336/lumen-sass-landing)
+**Links:** [Live site](https://lumen-sass-landing.vercel.app) · [Code](https://github.com/shervs336/ondra-saas-landing)
 
-![Lumen landing page](thumbnail@2x.png)
+![Ondra landing page](thumbnail@2x.png)
 
 ---
 
@@ -23,7 +23,7 @@ The goal was a page that feels like a funded product's site, with a waitlist tha
 
 ## Approach
 
-- **Show, don't tell.** Instead of a static screenshot, the hero shows the product working. A meeting transcript appears line by line, then Lumen writes the decisions and checks off action items. Visitors understand the product before they read a word.
+- **Show, don't tell.** Instead of a static screenshot, the hero shows the product working. A meeting transcript appears line by line, then Ondra writes the decisions and checks off action items. Visitors understand the product before they read a word.
 - **Editorial typography.** A serif display face (Instrument Serif) paired with Inter, plus a warm amber accent, set it apart from the default "blue SaaS" look.
 - **Real backend, zero cost.** The waitlist uses a Next.js Server Action that writes to Supabase Postgres and sends a confirmation email through Resend.
 

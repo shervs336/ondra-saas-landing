@@ -32,7 +32,7 @@ export function Footer() {
         ))}
       </div>
       <div className="mx-auto mt-14 flex max-w-5xl flex-col gap-2 border-t pt-6 text-xs text-muted-foreground sm:flex-row sm:justify-between">
-        <p>© 2026 Lumen. A portfolio concept; Lumen is not a real company.</p>
+        <p>© 2026 Ondra. A portfolio concept: Ondra, its customers and quotes are fictional.</p>
         <p>Built with Next.js, Tailwind CSS and Motion.</p>
       </div>
     </footer>

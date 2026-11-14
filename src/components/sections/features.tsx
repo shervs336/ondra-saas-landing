@@ -58,7 +58,7 @@ export function Features() {
             <span className="text-muted-foreground italic">Follow-ups that don&apos;t slip.</span>
           </>
         }
-        description="Lumen listens, understands who said what, and hands you a clean record of every conversation."
+        description="Ondra listens, understands who said what, and hands you a clean record of every conversation."
       />
 
       <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-6">

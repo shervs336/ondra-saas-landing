@@ -47,7 +47,7 @@ export function ProductMockup() {
       <div aria-hidden className="absolute -inset-x-10 -top-10 -bottom-10 -z-10 rounded-[3rem] bg-glow/20 blur-3xl" />
       <div
         role="img"
-        aria-label="Lumen app: a live meeting transcript on the left, AI summary and action items on the right"
+        aria-label="Ondra app: a live meeting transcript on the left, AI summary and action items on the right"
         className="overflow-hidden rounded-2xl border bg-surface/90 shadow-soft backdrop-blur-xl"
       >
         {/* Window chrome */}
@@ -96,7 +96,7 @@ export function ProductMockup() {
           {/* AI notes */}
           <div className="bg-muted/40 p-5 md:p-6">
             <p className="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide text-accent uppercase">
-              <SparklesIcon className="size-3.5" /> Lumen notes
+              <SparklesIcon className="size-3.5" /> Ondra notes
             </p>
             <div className="mt-4 min-h-64">
               <AnimatePresence>

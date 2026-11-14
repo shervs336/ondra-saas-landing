@@ -2,7 +2,7 @@ import { FadeIn, Reveal } from "@/components/reveal";
 import { WaitlistForm } from "@/components/waitlist-form";
 import { ProductMockup } from "@/components/product-mockup";
 
-const companies = ["Northwind", "Halcyon", "Arcadia Labs", "Meridian", "Fieldstone", "Kestrel & Co"];
+const companies = ["Brasswing", "Quillmoor", "Fernhollow Labs", "Tallowmere", "Oarlock", "Pebblestack & Co"];
 
 export function Hero() {
   return (
@@ -33,7 +33,7 @@ export function Hero() {
 
         <FadeIn delay={0.16}>
           <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground text-balance sm:text-lg">
-            Lumen joins your calls, writes the notes, and turns every decision into a follow-up, so your team can
+            Ondra joins your calls, writes the notes, and turns every decision into a follow-up, so your team can
             stop typing and start talking.
           </p>
         </FadeIn>

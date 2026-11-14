@@ -10,7 +10,7 @@ import { SectionHeading } from "@/components/section-heading";
 const plans = [
   {
     name: "Free",
-    blurb: "For trying Lumen on your own calls.",
+    blurb: "For trying Ondra on your own calls.",
     monthly: 0,
     yearly: 0,
     cta: "Start free",

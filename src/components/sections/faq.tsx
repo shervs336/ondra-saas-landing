@@ -6,12 +6,12 @@ import { SectionHeading } from "@/components/section-heading";
 
 const faqs = [
   {
-    q: "How does Lumen join my meetings?",
-    a: "Connect your calendar and Lumen joins the calls you choose as a quiet participant. You can also start it manually from the desktop app for in-person meetings.",
+    q: "How does Ondra join my meetings?",
+    a: "Connect your calendar and Ondra joins the calls you choose as a quiet participant. You can also start it manually from the desktop app for in-person meetings.",
   },
   {
     q: "Does everyone know they're being recorded?",
-    a: "Yes. Lumen announces itself when it joins, shows a recording badge to every participant, and anyone can ask it to leave.",
+    a: "Yes. Ondra announces itself when it joins, shows a recording badge to every participant, and anyone can ask it to leave.",
   },
   {
     q: "Is my data used to train AI models?",
@@ -26,8 +26,8 @@ const faqs = [
     a: "Your notes stay put. Beta members keep Pro free until launch, then get three months at half price. You can drop to the Free plan at any time.",
   },
   {
-    q: "Can I edit the notes Lumen writes?",
-    a: "Of course. Every summary and action item is editable, and Lumen learns your team's preferred format over time.",
+    q: "Can I edit the notes Ondra writes?",
+    a: "Of course. Every summary and action item is editable, and Ondra learns your team's preferred format over time.",
   },
 ];
 
