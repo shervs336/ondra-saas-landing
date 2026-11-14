@@ -3,7 +3,7 @@
 **Role:** Design and development (solo)
 **Type:** SaaS marketing site / landing page
 **Stack:** Next.js 16, TypeScript, Tailwind CSS v4, shadcn/ui, Motion, Supabase, Resend, Vercel
-**Links:** [Live site](https://lumen-sass-landing.vercel.app) · [Code](https://github.com/shervs336/ondra-saas-landing)
+**Links:** [Live site](https://ondra-saas-landing.vercel.app) · [Code](https://github.com/shervs336/ondra-saas-landing)
 
 ![Ondra landing page](thumbnail@2x.png)
 
@@ -53,7 +53,7 @@ The goal was a page that feels like a funded product's site, with a waitlist tha
 
 ## Result
 
-- Live at **lumen-sass-landing.vercel.app**, deployed from GitHub on every push.
+- Live at **ondra-saas-landing.vercel.app**, deployed from GitHub on every push.
 - Waitlist verified end to end in production: signups are stored, duplicates are detected, and confirmation emails send.
 - **Lighthouse:** Desktop 100 / 100 / 100 / 100. Mobile: Accessibility, Best Practices and SEO 100, Performance around 75–85 on a simulated slow phone.
 - Fully responsive from 360px up, in both themes.

@@ -1,6 +1,6 @@
 # Ondra: SaaS landing page
 
-**Live site:** https://lumen-sass-landing.vercel.app
+**Live site:** https://ondra-saas-landing.vercel.app
 
 A premium landing page for **Ondra**, a made-up AI meeting-notes product. It's a portfolio piece showing the kind of marketing site freelance clients and startups pay for: editorial typography, layered motion, a working waitlist and a dark/light theme.
 
