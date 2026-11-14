@@ -21,6 +21,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  // Absolute base for social preview images. Set explicitly so it never points at an old domain.
+  metadataBase: new URL("https://ondra-saas-landing.vercel.app"),
   title: "Ondra: AI meeting notes that remember everything",
   description:
     "Ondra joins your calls, writes the notes, and turns every decision into a follow-up. Join the private beta.",
